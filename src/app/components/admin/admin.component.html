@@ -1,0 +1,24 @@
+<div class="container">
+    <ng-container *ngIf="listTrainingsAdmin">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th> <th>NOM</th> <th>DESCRIPTION</th> <th>PRIX</th> <th>QUANTITE</th> <th>MODIF</th>
+                </tr>         
+            </thead>
+            <tbody>
+                <tr *ngFor="let training of listTrainingsAdmin">
+                    <td>{{training.id}}</td>
+                    <td>{{training.name}}</td>    
+                    <td>{{training.description}}</td>
+                    <td>{{training.price}}</td>
+                    <td>{{training.quantity}} </td>
+                    
+                    <td> <a class="btn btn-secondary" routerLink="/formadm" (click)="recupIdTraining(training)"> Modifier </a></td>
+                    <td> <a class="btn btn-danger" (click)="this.deleteTrainings(training.id)"> supprimer </a></td>
+                </tr>
+            </tbody>
+            <td> <a class="btn btn-primary" routerLink="/formadm" (click)="isAdd()"> Ajouter </a></td>
+        </table>    
+    </ng-container>
+</div>

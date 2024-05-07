@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+
+  <a class="navbar-brand" href="#">TRAININGS</a>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#" (click)="resetAddBool()">Liste des Formations</a>
+    </li>    
+    <li class="nav-item">
+      <a class="nav-link" href="#" (click)="resetAddBool()" routerLink="/cart">Contenu du Panier</a>
+    </li> 
+    <li class="nav-item" *ngIf="!this.usersevice.isConnected">
+      <a class="nav-link" href="#" (click)="resetAddBool()" routerLink="/connection">Connexion</a>
+    </li> 
+    <li class="nav-item" *ngIf="this.usersevice.isConnected">
+      <a class="nav-link" href="#" (click)="this.usersevice.deconnection()">DeConnexion</a>
+    </li> 
+    <li class="nav-item" *ngIf="this.usersevice.isAdmin">
+      <a class="nav-link" href="#" (click)="resetAddBool()" routerLink="/admin">gestion Admin</a>
+    </li> 
+  </ul>
+  
+</nav>
+
+<router-outlet> </router-outlet>

@@ -1,0 +1,45 @@
+<div *ngIf="apiservise.addBool" class="registration-form">
+    <form [formGroup]="myForm" >
+        <div class="form-icon">
+            <span><i class="register">ajouter</i></span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control item" id="name" placeholder="nom"  formControlName="name">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control item" id="description" placeholder="description" formControlName="description">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control item" id="price"  formControlName="price">
+        </div>
+        <div class="form-group">
+            <button type="submit"  class="btn btn-block create-account" (click)="addTrainigAdm(myForm)">ajouter</button>
+        </div>
+    </form>
+    <div class="social-media">
+        
+    </div>
+</div>
+
+<div *ngIf="!apiservise.addBool" class="registration-form">
+    <form [formGroup]="myForm">
+        <div class="form-icon">
+            <span><i class="register">modifier</i></span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control item" id="name" formControlName="name">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control item" id="description" formControlName="description">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control item" id="price" formControlName="price">
+        </div>
+        <div class="form-group">
+            <button type="submit"  class="btn btn-block create-account" (click)="modifTrainigAdm(myForm)">modifier</button>
+        </div>
+    </form>
+    <div class="social-media">
+        
+    </div>
+</div>

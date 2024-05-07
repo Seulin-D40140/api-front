@@ -1,0 +1,98 @@
+{
+  "trainings": [
+    {
+      "id": 1,
+      "name": "java",
+      "description": "initiation au web 5jrs",
+      "price": "1500",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "dotnet",
+      "description": "formation dotnet sur 3jrs",
+      "price": "1000",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "name": "python",
+      "description": "formation python/django sur 5jrs",
+      "price": "1300",
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "name": "PHP",
+      "description": "initiation au web 5jrs",
+      "price": "1300",
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "name": "Nodejs",
+      "description": "prise en main node js ewpress 2jrs",
+      "price": "1400",
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "name": "java avancer",
+      "description": "formation java avancé/bdd 3jrs",
+      "price": "1200",
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "name": "ruby",
+      "description": "initiation ruby 2jrs",
+      "price": 500,
+      "quantity": 1
+    },
+    {
+      "id": 9,
+      "name": "c#",
+      "description": "initiation c-sharpe 5jrs",
+      "price": 2000,
+      "quantity": 1
+    },
+    {
+      "name": "c++",
+      "description": "inititation c++ 10jrs",
+      "price": "5000",
+      "quantity": 1,
+      "id": 10
+    },
+    {
+      "id": 11,
+      "name": "go ",
+      "description": "test modification",
+      "price": "101",
+      "quantity": 1
+    }
+  ],
+  "users": [
+    {
+      "email": "nel640@hotmail.fr",
+      "password": "1234",
+      "roles": [
+        "ADMIN",
+        "USER"
+      ]
+    },
+    {
+      "email": "itai640@hotmail.fr",
+      "password": "1234",
+      "roles": [
+        "USER"
+      ]
+    },
+    {
+      "email": "kitsune640@hotmail.fr",
+      "password": "1234",
+      "roles": [
+        "USER"
+      ]
+    }
+  ]
+}

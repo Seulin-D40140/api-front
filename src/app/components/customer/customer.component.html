@@ -1,0 +1,28 @@
+<div class="registration-form">
+    <form [formGroup]="myForm" (ngSubmit)="onSaveCustomer(myForm)">
+        <div class="form-icon">
+            <span><i class="register">CompteCreation</i></span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control item" id="username" placeholder="nom" formControlName="name">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control item" id="firstName" placeholder="prenom" formControlName="firstName">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control item" id="address" placeholder="adress" formControlName="address">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control item" id="phone-number" placeholder="telephone" formControlName="phone">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control item" id="email" placeholder="email" formControlName="email">
+        </div>
+        <div class="form-group">
+            <button type="submit" [disabled]="!myForm.valid" class="btn btn-block create-account">Create Account</button>
+        </div>
+    </form>
+    <div class="social-media">
+        
+    </div>
+</div>
