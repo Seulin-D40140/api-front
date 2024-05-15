@@ -29,19 +29,13 @@ export class UserService {
 	verifUserExist(user : User)
 	{
 		let users = this.apiservice.listUsers
+		console.log(users)
 
 		users?.forEach(u=> 
 		{	
-			if( u.email === user.email && u.password === user.password)
+			if( u.name === user.name && u.password === user.password)
 			{
 				this.isConnected = true
-				u.roles.forEach(role => 
-					{
-						if(role == 'ADMIN')
-						{
-							this.isAdmin = true
-						}
-					})
 			}
 		})
 	}

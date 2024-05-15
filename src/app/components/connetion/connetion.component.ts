@@ -26,7 +26,7 @@ export class ConnetionComponent implements OnInit {
 		this.myForm = this.formbuilder.group(
 			{
 				password: [user.password , Validators.required],
-				email: [user.email , [Validators.required , Validators.pattern('[a-z0-9.@]*')]]
+				email: [user.name , [Validators.required , Validators.pattern('[a-z0-9.@]*')]]
 			})
 	}
 
@@ -58,6 +58,7 @@ export class ConnetionComponent implements OnInit {
 		error : (err) => {this.error = err.message},
 		complete : () => {this.error = null}
 		})
+		console.log(this.apiservice.listUsers)
 	}
 
 	isCartEmpty()

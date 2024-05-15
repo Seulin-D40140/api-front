@@ -5,6 +5,10 @@ import { environment } from 'src/environments/environment';
 import { User } from '../model/user';
 import { Traininadd } from '../model/traininadd.model';
 import { Category } from '../model/Category.model';
+import { Customer } from '../model/customer.model';
+import { Observable, catchError } from 'rxjs';
+import { Commande } from '../model/commande';
+import { OrderTraining } from '../model/orderTraining';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +32,7 @@ export class ApiService {
   }
 
   public getUsers()
-  {
+  { 
     return this.http.get<User[]>(environment.host+"/users")
   }
 
@@ -55,5 +59,20 @@ export class ApiService {
   public getTrainingByCategory(idcat : number)
   {
     return this.http.get<Training[]>(environment.host+"/trainingsCat/"+idcat)
+  }
+
+  public postCustomer(customer : Customer)
+  { 
+    this.http.post<Customer>(environment.host+"/customer" , customer).subscribe();
+  }
+
+  public postOrder( commande : Commande)
+  {
+    this.http.post<Commande>(environment.host+"/order" , commande).subscribe();
+  }
+
+  public postOrderTraining ( orderTraining : OrderTraining)
+  {
+    this.http.post<OrderTraining>(environment.host+"/orderTraining" , orderTraining).subscribe();
   }
 }
